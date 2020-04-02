@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import { action } from "@storybook/addon-actions";
 import { withKnobs, text } from "@storybook/addon-knobs";
 
@@ -7,7 +7,7 @@ import ButtonMd from "./Button.md";
 
 export default {
   component: Button,
-  title: "All Button",
+  title: "Button",
   parameters: {
     notes: ButtonMd // doesn't work
   },
@@ -16,44 +16,55 @@ export default {
 
 export const AllButton = () => (
   <>
-    <Button
-      onClick={action("clicked")}
-      text={text("Default Button", "Default Button")}
-    />
-    <Button
-      onClick={action("clicked")}
-      text={text("Primary Button", "Primary Button")}
-      type="primary"
-    />
-    <Button
-      onClick={action("clicked")}
-      text={text("Button", "Success Button")}
-      type="success"
-    />
+    <DefaultButton />
+    <PrimaryButton />
+    <SuccessButton />
   </>
 );
 
-export const DefaultButton = () => (
-  <>
-    <Button
-      onClick={action("clicked")}
-      text={text("Default Button", "Default Button")}
-    />
-  </>
-);
+// AllButton.story = {
+//   decorators: [
+//     storyFn => (
+//       <div
+//         style={{ display: "flex", justifyContent: "space-around" }}
+//       >
+//         {storyFn()}
+//       </div>
+//     )
+//   ]
+// };
 
-export const PrimaryButton = () => (
-  <Button
-    onClick={action("clicked")}
-    text={text("Primary Button", "Primary Button")}
-    type="primary"
-  />
-);
+export class DefaultButton extends Component {
+  render() {
+    return (
+      <Button
+        onClick={action("clicked")}
+        text={text("Default Button", "Default Button")}
+      />
+    );
+  }
+}
 
-export const SuccessButton = () => (
-  <Button
-    onClick={action("clicked")}
-    text={text("Success Button", "Success Button")}
-    type="success"
-  />
-);
+export class PrimaryButton extends Component {
+  render() {
+    return (
+      <Button
+        onClick={action("clicked")}
+        text={text("Primary Button", "Primary Button")}
+        type="primary"
+      />
+    );
+  }
+}
+
+export class SuccessButton extends Component {
+  render() {
+    return (
+      <Button
+        onClick={action("clicked")}
+        text={text("Success Button", "Success Button")}
+        type="success"
+      />
+    );
+  }
+}

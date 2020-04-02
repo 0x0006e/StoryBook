@@ -1,4 +1,6 @@
 import React from "react";
+import { string, oneOfType, oneOf } from "prop-types";
+
 import cx from "classnames";
 
 import "./Button.css";
@@ -22,11 +24,11 @@ Button.propTypes = {
   /**
    * 按钮文字
    **/
-  text: String,
+  text: string,
   /**
    * 默认类型.
    **/
-  type: String
+  type: oneOf(["default", "primary", "success"])
 };
 
 Button.defaultProps = {

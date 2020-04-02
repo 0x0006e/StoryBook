@@ -5,11 +5,9 @@
 }
 
 .Button.primary {
-  display: inline;
   background: blue;
 }
 
 .Button.success {
-  display: inline;
   background: green;
 }

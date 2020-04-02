@@ -1,15 +1,15 @@
 {
   "name": "story",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "story demo",
   "directories": {
     "test": "tests"
   },
   "scripts": {
+    "start": "npx http-server .dist",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 9009",
-    "build-storybook": "build-storybook"
+    "build": "build-storybook -c .storybook -o .dist"
   },
   "keywords": [],
   "author": "",

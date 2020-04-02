@@ -1,4 +1,15 @@
 .Button {
+  padding: 10px;
   display: inline;
-  background: white;
+  background: grey;
+}
+
+.Button.primary {
+  display: inline;
+  background: blue;
+}
+
+.Button.success {
+  display: inline;
+  background: green;
 }

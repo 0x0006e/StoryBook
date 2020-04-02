@@ -17,6 +17,7 @@
   "dependencies": {},
   "devDependencies": {
     "@storybook/addon-actions": "^5.3.18",
+    "@storybook/addon-console": "^1.2.1",
     "@storybook/addon-docs": "^5.3.18",
     "@storybook/addon-knobs": "^5.3.18",
     "@storybook/addon-links": "^5.3.18",
@@ -24,6 +25,7 @@
     "@storybook/addons": "^5.3.18",
     "@storybook/preset-create-react-app": "^2.1.1",
     "@storybook/react": "^5.3.18",
+    "classnames": "^2.2.6",
     "react-scripts": "^3.4.1"
   }
 }

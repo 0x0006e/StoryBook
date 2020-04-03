@@ -26,7 +26,7 @@ Button.propTypes = {
    **/
   text: string,
   /**
-   * 默认类型.
+   * 类型
    **/
   type: oneOf(["default", "primary", "success"])
 };

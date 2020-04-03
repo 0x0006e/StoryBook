@@ -34,16 +34,16 @@ AllButton.story = {
   ]
 };
 
-export const DefaultButton = () => {
+export function DefaultButton() {
   return (
     <Button
       onClick={action("clicked")}
       text={text("Default Button", "Default Button")}
     />
   );
-};
+}
 
-export const PrimaryButton = () => {
+export function PrimaryButton() {
   return (
     <Button
       onClick={action("clicked")}
@@ -51,9 +51,9 @@ export const PrimaryButton = () => {
       type="primary"
     />
   );
-};
+}
 
-export const SuccessButton = () => {
+export function SuccessButton() {
   return (
     <Button
       onClick={action("clicked")}
@@ -61,4 +61,4 @@ export const SuccessButton = () => {
       type="success"
     />
   );
-};
+}

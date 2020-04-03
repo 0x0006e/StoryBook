@@ -7,53 +7,60 @@ import ButtonMd from "./Button.md";
 
 export default {
   component: Button,
-  title: "All Button",
+  title: "Button",
   parameters: {
     notes: ButtonMd // doesn't work
   },
   decorators: [withKnobs]
 };
 
-export const AllButton = () => (
-  <>
+export function AllButton() {
+  return (
+    <>
+      <DefaultButton />
+      <PrimaryButton />
+      <SuccessButton />
+    </>
+  );
+}
+
+AllButton.story = {
+  decorators: [
+    storyFn => (
+      <div
+        style={{ display: "flex", justifyContent: "space-around" }}
+      >
+        {storyFn()}
+      </div>
+    )
+  ]
+};
+
+export function DefaultButton() {
+  return (
     <Button
       onClick={action("clicked")}
       text={text("Default Button", "Default Button")}
     />
+  );
+}
+
+export function PrimaryButton() {
+  return (
     <Button
       onClick={action("clicked")}
       text={text("Primary Button", "Primary Button")}
       type="primary"
     />
+  );
+}
+
+export function SuccessButton() {
+  return (
     <Button
       onClick={action("clicked")}
-      text={text("Button", "Success Button")}
+      text={text("Success Button", "Success Button")}
       type="success"
     />
-  </>
-);
-
-export const DefaultButton = () => (
-  <>
-    <Button
-      onClick={action("clicked")}
-      text={text("Default Button", "Default Button")}
-    />
-  </>
-);
-
-export const PrimaryButton = () => (
-  <Button
-    onClick={action("clicked")}
-    text={text("Primary Button", "Primary Button")}
-    type="primary"
-  />
-);
-
-export const SuccessButton = () => (
-  <Button
-    onClick={action("clicked")}
-    text={text("Success Button", "Success Button")}
-    type="success"
-  />
-);
+  );
+}

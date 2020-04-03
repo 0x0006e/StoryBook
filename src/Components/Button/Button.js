@@ -1,5 +1,5 @@
 import React from "react";
-import { string, oneOfType, oneOf } from "prop-types";
+import { string, oneOf } from "prop-types";
 
 import cx from "classnames";
 

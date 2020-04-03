@@ -14,13 +14,15 @@ export default {
   decorators: [withKnobs]
 };
 
-export const AllButton = () => (
-  <>
-    <DefaultButton />
-    <PrimaryButton />
-    <SuccessButton />
-  </>
-);
+export function AllButton() {
+  return (
+    <>
+      <DefaultButton />
+      <PrimaryButton />
+      <SuccessButton />
+    </>
+  );
+}
 
 AllButton.story = {
   decorators: [

@@ -2,16 +2,16 @@ import React from "react";
 import { action } from "@storybook/addon-actions";
 import { withKnobs, text } from "@storybook/addon-knobs";
 
-import Button from "./Button";
-import ButtonMd from "./Button.md";
+import Button from "../src/Button/Button";
+// import ButtonMd from "./Button.md";
 
 export default {
   component: Button,
   title: "Button",
   parameters: {
-    notes: ButtonMd // doesn't work
+    // notes: ButtonMd, // doesn't work
   },
-  decorators: [withKnobs]
+  decorators: [withKnobs],
 };
 
 export function AllButton() {
@@ -26,14 +26,14 @@ export function AllButton() {
 
 AllButton.story = {
   decorators: [
-    storyFn => (
+    (storyFn) => (
       <div
         style={{ display: "flex", justifyContent: "space-around" }}
       >
         {storyFn()}
       </div>
-    )
-  ]
+    ),
+  ],
 };
 
 export function DefaultButton() {

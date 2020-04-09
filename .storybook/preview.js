@@ -1,6 +1,7 @@
 import React from "react";
-import { addDecorator } from "@storybook/react";
-import { addParameters } from "@storybook/react";
+import { addDecorator, addParameters } from "@storybook/react";
+import { themes } from "@storybook/theming";
+
 import "@storybook/addon-console";
 
 addDecorator((storyFn) => (
@@ -11,5 +12,6 @@ addParameters({
   notes: "no special story nodes finded",
   options: {
     showRoots: true,
+    theme: themes.dark,
   },
 });

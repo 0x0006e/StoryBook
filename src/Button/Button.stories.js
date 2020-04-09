@@ -7,11 +7,11 @@ import ButtonMd from "./Button.md";
 
 export default {
   component: Button,
-  title: "Button",
+  title: "V2/Button",
   parameters: {
-    notes: ButtonMd // doesn't work
+    notes: ButtonMd, // doesn't work
   },
-  decorators: [withKnobs]
+  decorators: [withKnobs],
 };
 
 export function AllButton() {
@@ -26,14 +26,14 @@ export function AllButton() {
 
 AllButton.story = {
   decorators: [
-    storyFn => (
+    (storyFn) => (
       <div
         style={{ display: "flex", justifyContent: "space-around" }}
       >
         {storyFn()}
       </div>
-    )
-  ]
+    ),
+  ],
 };
 
 export function DefaultButton() {

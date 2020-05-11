@@ -14,27 +14,15 @@ export default {
   decorators: [withKnobs],
 };
 
-// export function AllButton() {
-//   return (
-//     <>
-//       <DefaultButton />
-//       <PrimaryButton />
-//       <SuccessButton />
-//     </>
-//   );
-// }
-
-// AllButton.story = {
-//   decorators: [
-//     (storyFn) => (
-//       <div
-//         style={{ display: "flex", justifyContent: "space-around" }}
-//       >
-//         {storyFn()}
-//       </div>
-//     ),
-//   ],
-// };
+export function AllButton() {
+  return (
+    <>
+      <DefaultButton />
+      <PrimaryButton />
+      <SuccessButton />
+    </>
+  );
+}
 
 export function DefaultButton() {
   return (
